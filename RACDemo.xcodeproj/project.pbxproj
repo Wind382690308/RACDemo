@@ -14,6 +14,9 @@
 		56C3E0711E4814AD0014E2C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C3E06F1E4814AD0014E2C7 /* Main.storyboard */; };
 		56C3E0731E4814AD0014E2C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C3E0721E4814AD0014E2C7 /* Assets.xcassets */; };
 		56C3E0761E4814AD0014E2C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56C3E0741E4814AD0014E2C7 /* LaunchScreen.storyboard */; };
+		56C9BD9D1E4D515C00BF5B8A /* HLAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C9BD9A1E4D515C00BF5B8A /* HLAudioRecorder.m */; };
+		56C9BD9E1E4D515C00BF5B8A /* HLAVMixObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C9BD9C1E4D515C00BF5B8A /* HLAVMixObject.m */; };
+		56C9BDA01E4D52A500BF5B8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56C9BD9F1E4D52A500BF5B8A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,11 @@
 		56C3E0721E4814AD0014E2C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56C3E0751E4814AD0014E2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56C3E0771E4814AD0014E2C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56C9BD991E4D515C00BF5B8A /* HLAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAudioRecorder.h; sourceTree = "<group>"; };
+		56C9BD9A1E4D515C00BF5B8A /* HLAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAudioRecorder.m; sourceTree = "<group>"; };
+		56C9BD9B1E4D515C00BF5B8A /* HLAVMixObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLAVMixObject.h; sourceTree = "<group>"; };
+		56C9BD9C1E4D515C00BF5B8A /* HLAVMixObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLAVMixObject.m; sourceTree = "<group>"; };
+		56C9BD9F1E4D52A500BF5B8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		ACA3B8C5D140CDF4A3B6B367 /* libPods-RACDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08C878B549977212B85D69D /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		CB61C5156CEBD19413E1CF76 /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C9BDA01E4D52A500BF5B8A /* AVFoundation.framework in Frameworks */,
 				41637E985AB28C3F96413F35 /* libPods-RACDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +83,7 @@
 		56C3E0651E4814AD0014E2C7 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				56C9BD981E4D514B00BF5B8A /* AudioMix */,
 				56C3E0691E4814AD0014E2C7 /* AppDelegate.h */,
 				56C3E06A1E4814AD0014E2C7 /* AppDelegate.m */,
 				56C3E06C1E4814AD0014E2C7 /* ViewController.h */,
@@ -95,9 +105,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		56C9BD981E4D514B00BF5B8A /* AudioMix */ = {
+			isa = PBXGroup;
+			children = (
+				56C9BD991E4D515C00BF5B8A /* HLAudioRecorder.h */,
+				56C9BD9A1E4D515C00BF5B8A /* HLAudioRecorder.m */,
+				56C9BD9B1E4D515C00BF5B8A /* HLAVMixObject.h */,
+				56C9BD9C1E4D515C00BF5B8A /* HLAVMixObject.m */,
+			);
+			path = AudioMix;
+			sourceTree = "<group>";
+		};
 		A4324F5B9F3AFFEF815CF239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56C9BD9F1E4D52A500BF5B8A /* AVFoundation.framework */,
 				ACA3B8C5D140CDF4A3B6B367 /* libPods-RACDemo.a */,
 			);
 			name = Frameworks;
@@ -226,6 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C9BD9E1E4D515C00BF5B8A /* HLAVMixObject.m in Sources */,
+				56C9BD9D1E4D515C00BF5B8A /* HLAudioRecorder.m in Sources */,
 				56C3E06E1E4814AD0014E2C7 /* ViewController.m in Sources */,
 				56C3E06B1E4814AD0014E2C7 /* AppDelegate.m in Sources */,
 				56C3E0681E4814AD0014E2C7 /* main.m in Sources */,

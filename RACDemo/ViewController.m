@@ -90,6 +90,20 @@
     TextField.textColor = [UIColor blueColor];
     
     
+    //新加的map操作通过block改变了事件的数据。map从上一个next事件接收数据，通过执行block把返回值传给下一个next事件。在上面的代码中，map以NSString为输入，取字符串的长度，返回一个NSNumber。
+    [[[TextField.rac_textSignal map:^id(NSString* value) {
+        
+        return @(value.length);
+    }] filter:^BOOL(NSString* value) {
+        
+        return [value integerValue]>3;
+    }] subscribeNext:^(id x) {
+        
+        NSLog(@"map  %@" , x);
+    }];
+
+    
+    
 //    RAC(loginBt,enabled) = [RACSignal combineLatest:@[TextField.rac_textSignal,passwordField.rac_textSignal] reduce:^id(NSString*tet1,NSString*tet2){
 //        
 //        return @(tet1.length>0&&tet2.length>0?YES:NO);

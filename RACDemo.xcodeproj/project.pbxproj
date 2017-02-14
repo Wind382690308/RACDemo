@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41637E985AB28C3F96413F35 /* libPods-RACDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA3B8C5D140CDF4A3B6B367 /* libPods-RACDemo.a */; };
+		5662FDD51E52978F005DD975 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 5662FDD41E52978F005DD975 /* main.js */; };
 		56C3E0681E4814AD0014E2C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C3E0671E4814AD0014E2C7 /* main.m */; };
 		56C3E06B1E4814AD0014E2C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C3E06A1E4814AD0014E2C7 /* AppDelegate.m */; };
 		56C3E06E1E4814AD0014E2C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C3E06D1E4814AD0014E2C7 /* ViewController.m */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5662FDD41E52978F005DD975 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		56C3E0631E4814AD0014E2C7 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C3E0671E4814AD0014E2C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56C3E0691E4814AD0014E2C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		56C3E0651E4814AD0014E2C7 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5662FDD41E52978F005DD975 /* main.js */,
 				56C9BD981E4D514B00BF5B8A /* AudioMix */,
 				56C3E0691E4814AD0014E2C7 /* AppDelegate.h */,
 				56C3E06A1E4814AD0014E2C7 /* AppDelegate.m */,
@@ -190,6 +193,7 @@
 				56C3E0761E4814AD0014E2C7 /* LaunchScreen.storyboard in Resources */,
 				56C3E0731E4814AD0014E2C7 /* Assets.xcassets in Resources */,
 				56C3E0711E4814AD0014E2C7 /* Main.storyboard in Resources */,
+				5662FDD51E52978F005DD975 /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
